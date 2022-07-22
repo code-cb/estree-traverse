@@ -1,0 +1,41 @@
+{
+  "name": "@codecb/estree-traverse",
+  "version": "0.0.1",
+  "type": "module",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "author": {
+    "email": "icodemyownlife@gmail.com",
+    "name": "ICodeMyOwnLife"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/code-cb/estree-traverse.git"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {
+    "@codecb/tree-traverse": "0.0.1"
+  },
+  "devDependencies": {
+    "@codecb/prettierrc": "0.0.1",
+    "@codecb/tsconfigs": "0.0.8",
+    "@types/estree": "1.0.0",
+    "prettier": "2.7.1",
+    "typescript": "4.7.4"
+  },
+  "peerDependencies": {
+    "@types/estree": "1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/estree": {
+      "optional": true
+    }
+  },
+  "prettier": "@codecb/prettierrc"
+}
