@@ -1,4 +1,4 @@
-import { createTraverse, GetResult } from '@codecb/tree-traverse';
+import { createTraverse } from '@codecb/tree-traverse';
 import { Node } from 'estree';
 
 const isNode = (value: unknown): value is Node =>
@@ -20,9 +20,4 @@ const getChildren = function* (node: Node): Generator<Node> {
   }
 };
 
-const getResult: GetResult<Node, readonly [node: Node, parent: Node]> = (
-  node,
-  parent,
-) => [node, parent];
-
-export const traverse = createTraverse(getChildren, getResult);
+export const traverse = createTraverse(getChildren);
